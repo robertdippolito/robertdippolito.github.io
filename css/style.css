@@ -1,0 +1,367 @@
+@import url(https://fonts.googleapis.com/css?family=Paytone+One);
+
+body {
+  background-color: #FBFCFE;
+}
+
+body {
+  font-family: 'Pragati Narrow' , sans-serif;
+  color: #111;
+  font-size: 100%;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden; 
+  line-height: 1.4;
+}
+
+#name {
+/*  transform: skewX(-6deg) rotate(-12deg) skewY(6deg) skewX(-12deg);
+*/}
+
+#text {
+  padding: 0; margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 150px;
+  font-family: 'Timmana', sans-serif;
+}
+
+#container {
+  padding-top: 6.250em;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+#container-about {
+  width: 50.000em;
+  padding-top: 6.250em;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+#container-mentormee {
+  width: 50.000em;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+#container-blogpost {
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+#banner-container {
+  padding-top: 6.250em; 
+}
+
+
+#links a,
+#external a,
+#contact-links a {
+  color: #ccc;
+  text-decoration: none; 
+}
+
+#links a:hover ,
+#external a:hover,
+#contact-links a:hover {
+  color: #999; 
+}
+
+#links ul {
+  text-align: center;
+  width: 42.500em;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+#links li {
+  letter-spacing: 10;
+  list-style-type: none;
+  color: #999;
+  font-size: 1.875em;
+  float: left;
+  width: 24%; 
+}
+
+#contact-links ul {
+  text-align: center;
+  margin-top: 3.5em;
+  width: 82.500em;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+#contact-links li {
+  letter-spacing: 10;
+  list-style-type: none;
+  color: #999;
+  font-size: 1.875em;
+  float: left;
+  width: 24%;
+}
+
+/* About Page */
+
+#container2 {
+  margin-top: 5.000em;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+#header2 {
+  padding-top: 0.625em;
+  position: absolute;
+  left: 0.313em;
+  top: 0.313em;
+  position: relative !important; 
+}
+
+#article {
+  font-family: 'Pragati Narrow' , sans-serif;
+  font-size: 1.125em;
+  line-height: 1.5em;
+  color: #373737; }
+
+#article a {
+  color: #404040;
+  font-weight: bold;
+  }
+
+#article p {
+  margin-left: auto;
+  margin-right: auto;
+  width: 29em;
+  margin-top: 1.375em;
+  margin-bottom: 1.375em;
+  overflow-x: hidden; 
+}
+
+#word-list p {
+
+  font-family: 'Pragati Narrow' , sans-serif;
+  font-size: 1.25em;
+  color: #404040;
+  margin-left: auto;
+  margin-right: auto;
+  width: 29em;
+  margin-top: 1.375em;
+  margin-bottom: 1.375em;
+  overflow-x: hidden; 
+}
+
+#logo {
+  /*font-family: "Montserrat";*/
+  font-size: 1.563em;
+  letter-spacing: -2;
+  color: #ddd;
+  font-weight: 700;
+  display: inline;
+  padding: 0.188em 0.500em 0.188em 0.375em; 
+}
+
+#word-title {
+    font-size: 1.875em;
+    font-family: 'Pragati Narrow' , sans-serif;
+    text-align: center;
+    font-weight: 700;
+    color: #444;
+    padding-bottom: 0.625em;
+}
+
+#logo:hover {
+  color: #404040; 
+}
+
+#image-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 50em; 
+}
+
+#image-wrapper img {
+  display: block;
+  margin-top: 1.750em;
+  margin-bottom: 1.750em;
+/*  width: 40em !important;*/
+  margin-left: auto !important;
+  margin-right: auto !important; 
+}
+
+#image-wrapper p {
+  text-align: center;
+  font-size:1.0em;
+  font-weight: 200;
+  font-family: 'Pragati Narrow' , sans-serif;
+}
+
+.h2-sub {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Paytone One";
+  /*font-family: "ProximaNova-Bold";*/
+  font-size: 1.313em;
+  width: 22.08682em;
+  color: #222;
+  margin-top: 1.875em;
+}
+
+#article p {
+  font-family: 'Lato', sans-serif;
+}
+
+#caption p {
+  font-family: 'Lato', sans-serif;
+}
+
+
+
+a {
+  color: #ccc;
+  text-decoration: none; 
+}
+
+a:hover {
+  color: #ccc; 
+}
+
+.h1-sub {
+  width: 14.5em; 
+  margin-top: 1em;
+  margin-bottom: 0em;
+  font-size: 2.250em;
+  color: #373737;
+  line-height: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  /*width: 12.88889em;*/
+}
+
+#article a:hover {
+  border-bottom: 0.063em solid #404040; 
+}
+
+ul {
+  font-size: 1.25em;
+  color: #404040;
+  font-family: 'Pragati Narrow' , sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  width: 29em; 
+}
+
+ol {
+  margin-left: auto;
+  margin-right: auto;
+  width: 29em;
+  list-style-type: decimal;
+  type: "1"; 
+}
+
+/*=============== Writing ===================== */
+
+#writing-list {
+  margin-top: 3.125em;
+  width: 47.500em;
+  margin-left: auto;
+  margin-right: auto; }
+
+#writing-list a {
+  color: #444; }
+
+#writing-list a:hover {
+  color: #444; }
+
+.post-name {
+  font-size: 35px;
+  /*font-family: "ProximaNova";*/
+  letter-spacing: -1;
+  /*font-weight: 700; */
+/*  padding-bottom: 5px;
+*/}
+
+.post-date-blog {
+  font-size: 1.250em;
+  /*font-family: "ProximaNova";*/
+  letter-spacing: -1;
+  display: inline;
+  color: #aaa;
+  float: right; }
+
+  .post-date {
+  font-size: 1.5em;
+  font-family: 'Pragati Narrow' , sans-serif;
+  letter-spacing: -1;
+  display: inline;
+  color: #aaa;
+  float: left; }
+
+#writing-title,
+#contact-title {
+  font-size: 1.875em;
+  /*font-family: "ProximaNova";*/
+  text-align: center;
+  letter-spacing: -2;
+  font-weight: 700;
+  color: #444;
+  padding-bottom: 0.625em; }
+
+.post {
+  overflow: hidden;
+  padding: 0.625em 1.875em 0.625em 1.875em;
+  margin-bottom: 2.500em; 
+}
+
+.post-projects {
+  overflow: hidden;
+  padding: 0.625em 1.875em 0.625em 1.875em;
+  margin-bottom: 2.500em; 
+}
+
+.post-projects a {
+  color: #404040;
+  font-weight: bold;
+}
+
+.post-projects a:hover {
+  border-bottom: 0.063em solid #404040; 
+}
+
+#article a:hover {
+  border-bottom: 0.063em solid #404040; 
+}
+
+.post-video {
+  text-align: center;
+}
+.post:hover {
+  background: #fafafd;
+  outline: 0.063em solid #dedede; 
+}
+
+
+#image-wrapper-contact {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 50em; 
+}
+
+#image-wrapper-contact img {
+  display: block;
+  /*margin-top: 3.750em;*/
+  /*margin-bottom: 3.750em;*/
+  width: 4em !important;
+  margin-left: auto !important;
+  margin-right: auto !important; 
+}
+
+#hs {
+  display: inline-block;
+  width: 5%;
+  height: auto;
+  margin: auto;
+}
