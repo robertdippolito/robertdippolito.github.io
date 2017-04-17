@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>rDIPP</title>
+    <title>.dipp</title>
     <meta name="description" content="Who is Robert?">
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="vendors/scrolloverflow.js"></script>
+    <script type="text/javascript" src="jquery.fullPage.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#fullpage').fullpage({
+          verticalCentered: false,
+          //to avoid problems with css3 transforms and fixed elements in Chrome, as detailed here: https://github.com/alvarotrigo/fullPage.js/issues/208
+          css3:false
+        });
+      });
+    </script>
+    <script type="text/javascript">
+      function myFunction(x) {
+        x.classList.toggle("change");
+      }
+    </script>
   </head>
-
   <body>
-    <div id="container">
-      <div id="banner-container">
-        <div id="name">
-          <p id="text">r.DIPP</p>
-        </div>
-
-        <div id="links">
-            <ul>
-              <li><a href="#">about</a></li>
-                <li><a href="#">projects</a></li>
-                <li><a href="#">blog</a></li>
-                <li><a href="#">contact</a></li>
-            </ul>
-          </div>
-
-          <div style="display:none"><img src="#"></div>
-        </div>
+    <div class = "topnav">
+      <img class ="resize" src="imgs/navbar_logo.png">
+      <div class = "container_toggle" onclick="myFunction(this)">
+        <div class = "bar1"></div>
+        <div class = "bar2"></div>
+        <div class = "bar3"></div>
+      </div>
     </div>
-
+    <div id="fullpage">
+      <div class="section " id="section0">
+        <img class ="section_img" id="section0" src = "imgs/lyricme_titletext.png">
+        <h1>.daily lyric base trivia<br/>.coming soon</h1>
+      </div>
+      <div class="section" id="section1"></div>
+      <div class="section" id="section2"><h1>Lovely images <br />for a lovely page</h1></div>
+      <div class="section" id="section3"><h1>One Image = One thousand words</h1></div>
+    </div>
   </body>
 </html>
