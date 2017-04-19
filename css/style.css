@@ -27,6 +27,11 @@ body {
     text-align: right;
   }
 
+  p {
+    color: #FFFAF0;
+    text-align: center;
+  }
+
   /* Centered texts in each section
   * --------------------------------------- */
   .section{
@@ -101,6 +106,16 @@ body {
   padding-top: 6.250em;
   margin-left: auto;
   margin-right: auto; 
+}
+
+.container-footer {
+  margin-left: auto;
+  margin-right: auto; 
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 200px;
+  background-color: #111;
 }
 
 #container-about {
@@ -480,6 +495,16 @@ ol {
 img.resize{
    max-width:15%;
    max-height:15%;
+}
+
+img.footerlogo{
+   margin-top: 20px;
+   width:100px;
+   height:45px;
+/*   max-width:65%;
+   max-height:65%;*/
+   margin-left: auto;
+   margin-right: auto;
 }
 
 img.titleimage {
