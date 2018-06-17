@@ -13,11 +13,12 @@
         <div class="buttons is-centered">
           <a class="button is-focused is-danger is-rounded is-large"><b>Resume</b></a>
           <div style="width:50px; height:auto; display:inline-block;"></div>
-          <a class="button is-focused is-info is-rounded is-large" href="/#/readinglist"><b>Reading List
-            <span class="icon">
-              <i class="fab fa fa-chevron-right"></i>
-            </span>
-          </b></a>
+          <router-link to="/readinglist">
+            <a class="button is-focused is-info is-rounded is-large">
+              <b>Reading List</b>
+              <span class="icon"><i class="fab fa fa-chevron-right"></i></span>
+            </a>
+          </router-link>
         </div>
       </div>
     </div>

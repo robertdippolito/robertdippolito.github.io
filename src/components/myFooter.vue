@@ -1,5 +1,5 @@
 <template>
-  <nav class="level is-mobile" style="padding-top: 40px; padding-left:35%; padding-right:35%;">
+  <nav class="level is-mobile" style="padding-top: 40px; padding-left:30%; padding-right:30%;">
     <div class="level-item has-text-centered">
       <div>
         <span class="icon has-text-grey-light">
