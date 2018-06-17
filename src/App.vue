@@ -11,6 +11,7 @@ import navbarView from './components/navbarView.vue'
 import mainHero from './components/mainHero.vue'
 import myFooter from './components/myFooter.vue'
 import ReadingList from './components/ReadingList.vue'
+import ReadingListEntry from './components/ReadingListEntry.vue'
 
 export default {
   name: 'App',
@@ -18,7 +19,8 @@ export default {
     navbarView,
     mainHero,
     myFooter,
-    ReadingList
+    ReadingList,
+    ReadingListEntry
   }
 }
 </script>
