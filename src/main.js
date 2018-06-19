@@ -5,6 +5,7 @@ import App from './App.vue'
 import router from './router'
 import 'bulma/css/bulma.css'
 
+// eslint-disable-next-line no-new
 new Vue({
   el: '#app',
   router,

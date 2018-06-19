@@ -8,17 +8,26 @@
         </a>
       </router-link>
     </div>
-    <ReadingListEntry />
+    <ReadingListEntry v-for="entry in storeState.readingListData" :entry="entry"/>
   </section>
 </template>
 
 <script>
+import { store } from '../store.js'
 import ReadingListEntry from './ReadingListEntry.vue'
 
 export default {
   name: 'ReadingList',
+  data () {
+    return {
+      storeState: store.state
+    }
+  },
   components: {
     ReadingListEntry
+  },
+  created () {
+    console.log(store.state.readingListData)
   }
 }
 </script>
