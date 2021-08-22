@@ -1,7 +1,6 @@
 module.exports = {
-  pathPrefix: "/robertdippolito.github.io",
   siteMetadata: {
-    title: `Rob's Cloud Computing Blog`,
+    title: `Hi, Welcome to Rob's Cloud Blog`,
     author: {
       name: `Robert D'Ippolito`,
       summary: `who writes about all things AWS.`,
