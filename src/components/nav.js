@@ -1,4 +1,6 @@
 import * as React from "react"
+import { Link } from "gatsby"
+
 import "../style/nav.css"
 
 const Nav = () => {
@@ -6,15 +8,27 @@ const Nav = () => {
     <div className="navbar-main">
       <div className="navbar-left">
         <div className="navbar-logo">
-          <div className="navbar-heading">RD</div>
+          <div className="navbar-heading">
+            <Link className="navbar-link" to="/">
+              RD
+            </Link>
+          </div>
         </div>
       </div>
       <div className="navbar-right">
         <div className="navbar-home">
-          <div className="navbar-heading">Home</div>
+          <div className="navbar-heading">
+            <Link className="navbar-link" to="/">
+              Home
+            </Link>
+          </div>
         </div>
         <div className="navbar-about">
-          <div className="navbar-heading">About</div>
+          <div className="navbar-heading">
+            <Link className="navbar-link" to="/about">
+              About
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -25,10 +25,10 @@
 
 .navbar-main {
     display: grid;
-    margin-top: 1em;
     grid-template-areas: 
     "navLeft navRight";
     height: 40px;
+    padding-top: 1em;
 }
 .navbar-left {
     display: grid;
@@ -62,10 +62,17 @@
     text-align: center;
 }
 .navbar-heading {
-    font-family: Roboto-Black;
+    font-family: Roboto-Medium;
     font-size: large;
 }
 .navbar-heading:hover{
-    color: purple;
     cursor: pointer;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: black;
+}
+.navbar-link:hover {
+    color: purple;
 }

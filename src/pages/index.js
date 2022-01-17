@@ -28,6 +28,10 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
       <Bio />
+      <div className="blog-main-artile-disclaimer-container">
+        <div className="blog-main-artile-disclaimer-title">LATEST ARTICLES</div>
+        <div className="blog-main-artile-disclaimer-subtitle">All opinions are my own and not those of my employer.</div>
+      </div>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -57,6 +61,7 @@ const BlogIndex = ({ data, location }) => {
                   />
                 </section>
               </article>
+              <hr />
             </li>
           )
         })}

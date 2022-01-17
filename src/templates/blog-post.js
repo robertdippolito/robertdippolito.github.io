@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import "../style/blog-post.css"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -21,10 +22,11 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <div className="blog-post-detail-title" itemProp="headline">{post.frontmatter.title}</div>
+          <div className="blog-post-detail-date">{post.frontmatter.date}</div>
         </header>
         <section
+          className="blog-post-detail-body"
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
@@ -44,14 +46,14 @@ const BlogPostTemplate = ({ data, location }) => {
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link className="blog-nav-link" to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link className="blog-nav-link" to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}

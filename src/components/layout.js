@@ -6,15 +6,15 @@ const Layout = ({ location, title, children }) => {
   const isRootPath = location.pathname === rootPath
 
   return (
-    <>
+    <div className="blog-background">
       <Nav />
       <div className="global-wrapper" data-is-root-path={isRootPath}>
         <main>{children}</main>
-        <footer>
+        <footer className="blog-main-post-footer">
           © {new Date().getFullYear()}, Robert D'Ippolito
         </footer>
       </div>
-    </>
+    </div>
   )
 }
 

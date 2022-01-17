@@ -1,0 +1,17 @@
+@import url("../style.css");
+
+.blog-post-detail-title {
+    font-family: Roboto-Medium;
+    font-size: var(--fontSize-6);
+}
+.blog-post-detail-date {
+    font-family: Roboto-Light;
+    font-size: var(--fontSize-1);
+}
+.blog-post-detail-body {
+    margin-top: 2em;
+    font-family: Roboto-Regular;
+}
+.blog-nav-link {
+    text-decoration: none;
+}

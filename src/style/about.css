@@ -1,0 +1,40 @@
+@import url("../style.css");
+
+
+.about-container {
+    margin-top: 6em;
+    max-width: 65ch;
+    min-height: 100%;
+    display: grid;
+    grid-template-areas:
+    "section-a"
+    "section-b"
+    "section-c"
+
+}
+.about-main-section-a {
+    margin-top: 2em;
+    grid-area: section-a
+}
+.about-main-section-b {
+    margin-top: 2em;
+    grid-area: section-b
+}
+.about-main-section-c {
+    margin-top: 2em;
+    grid-area: section-c
+}
+.about-title {
+    font-family: Roboto-Medium;
+    font-size: var(--fontSize-3);
+}
+.about-body {
+    margin-top: 1em;
+    font-family: Roboto-Light;
+    font-size: var(--fontSize-2);
+}
+.about-break {
+    display: block;
+    content: "";
+    margin-top: 1em;
+}

@@ -34,11 +34,10 @@ const Bio = () => {
         )}
         <StaticImage
           className="bio-grid-img"
-          layout="fixed"
+          layout="constrained"
           formats={["AUTO", "WEBP", "AVIF"]}
           src="../images/full-rob-2.jpg"
-          width={200}
-          height={200}
+          aspectRatio={1}
           quality={95}
           alt="Profile picture"
         />
