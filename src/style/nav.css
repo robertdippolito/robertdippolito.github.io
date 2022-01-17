@@ -1,0 +1,71 @@
+@font-face {
+    font-family: Roboto-Regular;
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Black;
+    src: url("../fonts/Roboto/Roboto-Black.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url("../fonts/Roboto/Roboto-Light.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url("../fonts/Roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: Roboto-Medium;
+    src: url("../fonts/Roboto/Roboto-Medium.ttf");
+}
+
+.navbar-main {
+    display: grid;
+    margin-top: 1em;
+    grid-template-areas: 
+    "navLeft navRight";
+    height: 40px;
+}
+.navbar-left {
+    display: grid;
+    height: 100%;
+    grid-area: navLeft;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "logo empty empty";
+}
+.navbar-right {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-area: navRight;
+    grid-template-areas:
+    "empty home about";
+}
+.navbar-logo {
+    grid-area: logo;
+    margin: 0.5em;
+    text-align: center;
+}
+.navbar-home {
+    grid-area: home;
+    margin: 0.5em;
+    text-align: center;
+}
+.navbar-about {
+    grid-area: about;
+    margin: 0.5em;
+    text-align: center;
+}
+.navbar-heading {
+    font-family: Roboto-Black;
+    font-size: large;
+}
+.navbar-heading:hover{
+    color: purple;
+    cursor: pointer;
+}

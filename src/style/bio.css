@@ -1,0 +1,25 @@
+@font-face {
+    font-family: Roboto-Regular;
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+.bio-main-container {
+    height: 40vh;    
+}
+.bio-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "bio bio img";
+}
+.bio-grid-title {
+    grid-area: bio;
+    font-family: Roboto-Regular;
+    font-size: 1.5em;
+    margin: auto 5px;
+}
+.bio-grid-img {
+    grid-area: img;
+    border-radius: 100%;
+    margin: 5px;
+}

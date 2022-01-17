@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Hi, Welcome to Rob's Cloud Blog`,
+    title: `Blog | Rob D'Ippolito`,
     author: {
-      name: `Robert D'Ippolito`,
-      summary: `who writes about all things AWS.`,
+      name: `Rob.`,
+      summary: `Welcome to my blog where I build cloud native solutions on AWS.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
