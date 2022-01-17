@@ -4,7 +4,8 @@
 }
 
 .bio-main-container {
-    height: 40vh;    
+    height: 40vh;
+    width: 800px;
 }
 .bio-grid-container {
     display: grid;
@@ -16,10 +17,10 @@
     grid-area: bio;
     font-family: Roboto-Regular;
     font-size: 1.5em;
-    margin: auto 5px;
+    margin: auto 10px;
 }
 .bio-grid-img {
     grid-area: img;
     border-radius: 100%;
-    margin: 5px;
+    margin: 15px;
 }
