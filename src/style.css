@@ -1,5 +1,30 @@
 /* CSS Custom Properties Definitions */
 
+@font-face {
+  font-family: Roboto-Regular;
+  src: url("./fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: Roboto-Black;
+  src: url("./fonts/Roboto/Roboto-Black.ttf");
+}
+
+@font-face {
+  font-family: Roboto-Light;
+  src: url("./fonts/Roboto/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: Roboto-Bold;
+  src: url("./fonts/Roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: Roboto-Medium;
+  src: url("./fonts/Roboto/Roboto-Medium.ttf");
+}
+
 :root {
   --maxWidth-none: "none";
   --maxWidth-xs: 20rem;
@@ -318,6 +343,30 @@ a:focus {
 
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
+}
+
+.blog-main-post-title {
+  font-family: Roboto-Bold;
+  font-size: var(--fontSize-3);
+  color: black;
+}
+
+.blog-main-post-title:hover {
+  color: purple;
+}
+
+.blog-main-post-link {
+  text-decoration: none;
+}
+
+.blog-main-post-date {
+  font-family: Roboto-Light;
+  font-size: var(--fontSize-0);
+}
+
+.blog-main-post-description {
+  font-family: Roboto-Regular;
+  font-size: var(--fontSize-1);
 }
 
 /* Media queries */

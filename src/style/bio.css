@@ -1,11 +1,13 @@
+@import url('../style.css');
+
 @font-face {
     font-family: Roboto-Regular;
     src: url("../fonts/Roboto/Roboto-Regular.ttf");
 }
 
 .bio-main-container {
+    padding-top: var(--spacing-12);
     height: 40vh;
-    width: 800px;
 }
 .bio-grid-container {
     display: grid;
@@ -16,7 +18,7 @@
 .bio-grid-title {
     grid-area: bio;
     font-family: Roboto-Regular;
-    font-size: 1.5em;
+    font-size: 2em;
     margin: auto 10px;
 }
 .bio-grid-img {
