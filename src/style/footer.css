@@ -1,0 +1,60 @@
+@import url("../style.css");
+
+.footer-main {
+    padding:0;
+    font-family: Roboto-Regular;
+    font-size: var(--fontSize-2);
+    color: var(--color-blog-primary);
+    background-color: #F2EBE5;
+}
+.footer-main-container {
+    margin: 0 auto;
+    max-width: var(--maxWidth-wrapper);
+    padding: var(--spacing-10) var(--spacing-5);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+        ". contact ."
+        ". button ."
+        "copyright . links"
+    ;
+}
+.footer-main-contact {
+    margin: 2em;
+    text-align: center;
+    grid-area: contact;
+    font-family: Roboto-Medium;
+    font-size: x-large;
+}
+.footer-main-button {
+    grid-area: button;
+    text-align: center;
+}
+.footer-main-button-detail {
+  background-color: var(--color-blog-primary);
+  font-family: Roboto-Medium;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: x-large;
+}
+.footer-main-button-detail:hover {
+    cursor: pointer;
+    background-color:#072D60;
+  }
+.footer-main-copyright {
+    grid-area: copyright;
+    margin: 2em;
+}
+.footer-main-links {
+    grid-area: links;
+    margin: 2em;
+}
+.footer-main-link{
+    text-decoration: none;
+    color: white;
+}

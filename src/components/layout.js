@@ -1,5 +1,6 @@
 import * as React from "react"
-import Nav from '../components/nav'
+import Nav from "../components/nav"
+import Footer from "../components/footer"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -10,10 +11,8 @@ const Layout = ({ location, title, children }) => {
       <div className="global-wrapper" data-is-root-path={isRootPath}>
         <Nav />
         <main>{children}</main>
-        <footer className="blog-main-post-footer">
-          © {new Date().getFullYear()}, Robert D'Ippolito
-        </footer>
       </div>
+      <Footer />
     </div>
   )
 }

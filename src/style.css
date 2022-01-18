@@ -381,11 +381,6 @@ a:focus {
   color: var(--color-blog-primary)
 }
 
-.blog-main-post-footer {
-  font-family: Roboto-Regular;
-  font-size: var(--fontSize-2);
-  color: var(--color-blog-primary)
-}
 .blog-main-artile-disclaimer-container {
   margin-bottom: 2em;
   color: var(--color-blog-primary)
