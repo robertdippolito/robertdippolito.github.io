@@ -1,10 +1,9 @@
 import * as React from "react"
-import '../style/about.css'
+import "../style/about.css"
 
 import Layout from "../components/layout"
 
 const About = () => {
-
   return (
     <Layout location="/about" title="about">
       <div className="about-container">

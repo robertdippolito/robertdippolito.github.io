@@ -20,7 +20,6 @@ Armed with a handful of features and a couple pages of notes I got to work.
 
 ![Initial Design](./initial-design.png)
 
-
 ### Version 1.0 — The First Cut
 
 The first version of Lyric-Me took a little under 6 weeks / Saturdays to scrape together. Version 1.0 had a static quiz list which meant adding and removing quizzes would require a code change, the trophy view was working but had no content, and there were no meaningful settings options. But it worked!
@@ -44,7 +43,6 @@ With this second wind, I got down to business busting bugs and improving the cod
 ![Lyric-Me Version 2.0](./lyric-me-version-2.png)
 
 The feedback that came in from version 2.0 was more positive and constructive which was reassuring. I grouped the feedback into three different buckets quick fix items, must fix items and nice-to-haves. Some of the feedback I received requested net new features that would take hours of rework. This is where having my scope set really helped; I kept the feedback but saved those features for a later date. Overall, the feedback was more positive for version 2.0 but the application wasn’t ready yet.
-
 
 ### Version 3.0 — The Final Cut
 

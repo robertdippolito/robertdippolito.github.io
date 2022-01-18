@@ -22,7 +22,9 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <div className="blog-post-detail-title" itemProp="headline">{post.frontmatter.title}</div>
+          <div className="blog-post-detail-title" itemProp="headline">
+            {post.frontmatter.title}
+          </div>
           <div className="blog-post-detail-date">{post.frontmatter.date}</div>
         </header>
         <section
@@ -31,8 +33,7 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
-        <footer>
-        </footer>
+        <footer></footer>
       </article>
       <nav className="blog-post-nav">
         <ul
@@ -46,7 +47,11 @@ const BlogPostTemplate = ({ data, location }) => {
         >
           <li>
             {previous && (
-              <Link className="blog-nav-link" to={previous.fields.slug} rel="prev">
+              <Link
+                className="blog-nav-link"
+                to={previous.fields.slug}
+                rel="prev"
+              >
                 ← {previous.frontmatter.title}
               </Link>
             )}

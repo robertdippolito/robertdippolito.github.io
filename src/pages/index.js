@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import '../style.css'
+import "../style.css"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -30,7 +30,9 @@ const BlogIndex = ({ data, location }) => {
       <Bio />
       <div className="blog-main-artile-disclaimer-container">
         <div className="blog-main-artile-disclaimer-title">LATEST POSTS</div>
-        <div className="blog-main-artile-disclaimer-subtitle">All opinions are my own and not those of my employer.</div>
+        <div className="blog-main-artile-disclaimer-subtitle">
+          All opinions are my own and not those of my employer.
+        </div>
       </div>
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
