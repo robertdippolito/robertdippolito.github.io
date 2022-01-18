@@ -8,6 +8,7 @@
 .bio-main-container {
     padding-top: var(--spacing-12);
     height: 40vh;
+    margin-top: 4em;
 }
 .bio-grid-container {
     display: grid;

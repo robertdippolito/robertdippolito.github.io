@@ -9,7 +9,7 @@ const About = () => {
     <Layout location="/about" title="about">
       <div className="about-container">
         <div className="about-main-section-a">
-          <div className="about-title">Hi, I am Robert D'Ippolito</div>
+          <div className="about-title">Hi, I'm Robert D'Ippolito</div>
           <div className="about-body">
             I'm an engineering manager at Ada - currently based out of Toronto,
             Canada.

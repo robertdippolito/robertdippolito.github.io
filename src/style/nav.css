@@ -36,15 +36,15 @@
     grid-area: navLeft;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
-    "logo empty empty";
+    "logo . .";
 }
 .navbar-right {
     display: grid;
     height: 100%;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: auto 100px 100px;
     grid-area: navRight;
     grid-template-areas:
-    "empty home about";
+    ". home about";
 }
 .navbar-logo {
     grid-area: logo;
@@ -63,6 +63,7 @@
 }
 .navbar-heading {
     font-family: Roboto-Medium;
+    text-align: left;
     font-size: large;
 }
 .navbar-heading:hover{

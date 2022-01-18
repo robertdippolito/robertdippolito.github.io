@@ -7,8 +7,8 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div className="blog-background">
-      <Nav />
       <div className="global-wrapper" data-is-root-path={isRootPath}>
+        <Nav />
         <main>{children}</main>
         <footer className="blog-main-post-footer">
           © {new Date().getFullYear()}, Robert D'Ippolito

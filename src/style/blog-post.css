@@ -1,6 +1,7 @@
 @import url("../style.css");
 
 .blog-post-detail-title {
+    margin-top: 4em;
     font-family: Roboto-Medium;
     font-size: var(--fontSize-6);
 }
