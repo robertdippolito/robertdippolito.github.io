@@ -294,6 +294,10 @@ a:focus {
   margin-bottom: var(--spacing-4);
   margin-top: var(--spacing-4);
 }
+.post-list-item:hover {
+  background-color: #072D601A;
+  cursor: pointer;
+}
 
 .post-list-item p {
   margin-bottom: var(--spacing-0);

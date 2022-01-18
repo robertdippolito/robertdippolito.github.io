@@ -3,6 +3,7 @@
 
 .about-container {
     margin-top: 6em;
+    color: var(--color-blog-primary);
     max-width: 65ch;
     min-height: 100%;
     display: grid;

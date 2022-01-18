@@ -28,6 +28,11 @@
     margin: 0.5em;
     text-align: center;
 }
+.navbar-logo-img {
+    font-family: Roboto-Bold;
+    font-size: xx-large;
+    text-align: left;
+}
 .navbar-home {
     grid-area: home;
     margin: 0.5em;

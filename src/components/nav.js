@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 import "../style/nav.css"
 
@@ -8,7 +9,7 @@ const Nav = () => {
     <div className="navbar-main">
       <div className="navbar-left">
         <div className="navbar-logo">
-          <div className="navbar-heading">
+          <div className="navbar-logo-img">
             <Link className="navbar-link" to="/">
               RD
             </Link>
