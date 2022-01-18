@@ -29,7 +29,7 @@ const BlogIndex = ({ data, location }) => {
       <Seo title="All posts" />
       <Bio />
       <div className="blog-main-artile-disclaimer-container">
-        <div className="blog-main-artile-disclaimer-title">LATEST ARTICLES</div>
+        <div className="blog-main-artile-disclaimer-title">LATEST POSTS</div>
         <div className="blog-main-artile-disclaimer-subtitle">All opinions are my own and not those of my employer.</div>
       </div>
       <ol style={{ listStyle: `none` }}>
