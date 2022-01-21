@@ -408,7 +408,7 @@ a:focus {
     list-style-position: inside;
   }
   .blog-main-artile-disclaimer-container {
-    margin-top: 6em;
+    padding-top: 6em;
   }
 }
 
@@ -422,12 +422,12 @@ a:focus {
     list-style-position: inside;
   }
   .blog-main-artile-disclaimer-container {
-    margin-top: 6em;
+    padding-top: 6em;
   }
 }
 
 @media (max-width: 400px) {
   .blog-main-artile-disclaimer-container {
-    margin-top: 12em;
+    padding-top: 12em;
   }
 }
