@@ -29,10 +29,6 @@ This year I challenged myself to read a book every month and reflecting back on 
 
 Resilience was a great reflection on the timeless lessons that author Eric Gretiens learned while he completed his basic training as a navy seal. The book takes the form of written letters and reflections to a close friend Zach during training, this friend was an explanatory member of the seals and a great comrade. This friend had an overly difficult time reintegrating back into society after his time with the force, a problem, that many of our veterans face today. I felt like the approach to telling the story was interesting and the lessons learned were applicable to many things in life.
 
-### Resilience — Rating 3
-
-Resilience was a great reflection on the timeless lessons that author Eric Gretiens learned while he completed his basic training as a navy seal. The book takes the form of written letters and reflections to a close friend Zach during training, this friend was an explanatory member of the seals and a great comrade. This friend had an overly difficult time reintegrating back into society after his time with the force, a problem, that many of our veterans face today. I felt like the approach to telling the story was interesting and the lessons learned were applicable to many things in life.
-
 ### Rich Dad Poor Dad — Rating 2
 
 I found many of the teachings to be very impactful and perspective changing. Even the simple ideas like the definition of a ‘true asset’ and how it is important to differentiate them from other assets. The author did a good job of explaining each of the lessons, however, his reflection on some of the lessons felt shallow and biased towards his rich dad’s views. The book aggressively challenges the readers views and forces a middle ground. Overall, the book was thought provoking and challenged my beliefs when it came to financial intelligence. Robert’s lessons stuck with me and I found myself reflecting on them frequently with colleagues at work.
