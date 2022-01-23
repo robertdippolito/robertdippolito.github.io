@@ -293,6 +293,8 @@ a:focus {
 .post-list-item {
   margin-bottom: var(--spacing-4);
   margin-top: var(--spacing-4);
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .post-list-item:hover {
   background-color: #072D601A;
