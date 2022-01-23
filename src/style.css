@@ -267,7 +267,7 @@ a:focus {
 
 /* Custom classes */
 .blog-background {
-  background: url("../src//images/landing-background-2.svg");
+  background: url("../src//images/landing-background.svg");
   background-size: cover;
 }
 
