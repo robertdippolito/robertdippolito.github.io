@@ -22,7 +22,7 @@ phases:
         ./public/index.html s3://robert-dippolito-personal-blog/public
       - >
         aws cloudfront create-invalidation --distribution-id E2Q3V0NVXC9SVY
-        --paths /public
+        --paths /*
 artifacts:
   files:
     - '**/*'
