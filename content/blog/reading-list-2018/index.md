@@ -33,7 +33,7 @@ Resilience was a great reflection on the timeless lessons that author Eric Greti
 
 I found many of the teachings to be very impactful and perspective changing. Even the simple ideas like the definition of a ‘true asset’ and how it is important to differentiate them from other assets. The author did a good job of explaining each of the lessons, however, his reflection on some of the lessons felt shallow and biased towards his rich dad’s views. The book aggressively challenges the readers views and forces a middle ground. Overall, the book was thought provoking and challenged my beliefs when it came to financial intelligence. Robert’s lessons stuck with me and I found myself reflecting on them frequently with colleagues at work.
 
-### Better Faster — Rating 2
+### Better Faster — Rating 3
 
 My favourite parts of the book were when Jeremy talked about his own experiences with entrepreneurship. They felt genuine and his personal story is very relatable to many young professionals. At times I felt that the farmer / hunter analogy seemed forced and I noticed some common themes emerged across all of the patterns (i.e. embrace social, go digital). Jeremy has built and scaled an agency that is truly impressive and I am excited to see what future has in store for Trend Hunter.
 
