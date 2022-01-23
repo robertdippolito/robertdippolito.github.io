@@ -1,0 +1,15 @@
+.error-container {
+    margin-top: 6em;
+    color: var(--color-blog-primary);
+    max-width: 65ch;
+    min-height: 40vh;
+}
+.error-title {
+    font-family: Roboto-Medium;
+    font-size: var(--fontSize-6);
+}
+.error-body {
+    margin-top: 1em;
+    font-family: Roboto-Light;
+    font-size: var(--fontSize-2);
+}
