@@ -1,0 +1,31 @@
+{
+    "Version": "2012-10-17",
+    "Id": "PolicyForPipelineDeploy",
+    "Statement": [
+        {
+            "Sid": "1",
+            "Effect": "Allow",
+            "Action": "iam:PassRole",
+            "Resource": "*"
+        },
+        {
+            "Sid": "2",
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": "*"
+        },
+        {
+            "Sid": "3",
+            "Effect": "Allow",
+            "Action": [
+                "codepipeline:*",
+                "iam:ListRoles",
+                "codebuild:BatchGetBuilds",
+                "codebuild:StartBuild",
+                "codestar-connections:*",
+                "iam:PassRole"
+              ],
+            "Resource": "*"
+        }
+    ]
+}
