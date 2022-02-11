@@ -14,9 +14,9 @@ resource "aws_cloudfront_distribution" "cf" {
   }
 
   custom_error_response {
-    error_code = "404"
-    response_code = "200"
-    response_page_path = "/index.html"
+    error_code            = "404"
+    response_code         = "200"
+    response_page_path    = "/index.html"
     error_caching_min_ttl = 10
   }
 
@@ -25,6 +25,12 @@ resource "aws_cloudfront_distribution" "cf" {
     cached_methods         = var.cached_methods
     target_origin_id       = aws_s3_bucket.blog_site_files.bucket_regional_domain_name
     viewer_protocol_policy = "redirect-to-https"
+
+    lambda_function_association {
+      event_type   = "origin-request"
+      include_body = false
+      lambda_arn   = "${aws_lambda_function.lambda.arn}:${aws_lambda_function.lambda.version}"
+    }
 
     forwarded_values {
       headers      = []
@@ -40,14 +46,26 @@ resource "aws_cloudfront_distribution" "cf" {
       restriction_type = "none"
     }
   }
+
   viewer_certificate {
     acm_certificate_arn      = aws_acm_certificate.cert.arn
     ssl_support_method       = "sni-only"
     minimum_protocol_version = "TLSv1.2_2018"
   }
+
   tags = var.tags
 }
 
 resource "aws_cloudfront_origin_access_identity" "oai" {
   comment = "OAI for ${var.endpoint}"
 }
+
+# module "lambda-at-edge" {
+#   source                 = "transcend-io/lambda-at-edge/aws"
+#   version                = "0.4.0"
+#   description            = "Edge Lambda responsible for adjusting uri path"
+#   lambda_code_source_dir = "../edgeLambda/"
+#   name                   = "lambda-redirect-terraform"
+#   s3_artifact_bucket     = "edge_lambda_artifacts_bucket_001"
+#   runtime                = "nodejs14.x"
+# }

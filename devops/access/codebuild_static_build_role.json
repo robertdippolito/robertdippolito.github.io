@@ -26,6 +26,14 @@
                 "logs:PutLogEvents"
               ],
             "Resource": "*"
+        },
+        {
+            "Sid": "4",
+            "Effect": "Allow",
+            "Action": [
+                "ssm:GetParameters"
+              ],
+            "Resource": "arn:aws:ssm:ca-central-1:978863440604:parameter/github-repo-key"
         }
     ]
 }

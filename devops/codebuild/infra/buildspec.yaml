@@ -1,0 +1,28 @@
+version: 0.2
+env:
+    parameter-store:
+      GITHUB_SECRET: github-repo-key
+phases:
+  install:
+    commands:
+      - "apt install unzip -y"
+      - "wget https://releases.hashicorp.com/terraform/${TF_VERSION}/terraform_${TF_VERSION}_linux_amd64.zip"
+      - "unzip terraform_${TF_VERSION}_linux_amd64.zip"
+      - "mv terraform /usr/local/bin/"
+  pre_build:
+    commands:
+      - ls
+      - cd "${TF_SRC_DIR}"
+      - ls
+      - terraform init -input=false
+  build:
+    commands:
+      - terraform ${TF_ACTION} -var="github_token=github-repo-key" -input=false -auto-approve
+
+  post_build:
+    commands:
+      - echo "Terraform completed on `date`"
+
+artifacts:
+  files:
+    - '**/*'

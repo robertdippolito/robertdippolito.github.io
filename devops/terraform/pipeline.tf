@@ -1,6 +1,6 @@
 resource "aws_codepipeline" "static_web_pipeline" {
-  name     = "terra-robertdippolito-blog-pipeline"
-  role_arn = aws_iam_role.pipeline_role.arn
+  name       = "terra-robertdippolito-blog-pipeline"
+  role_arn   = aws_iam_role.pipeline_role.arn
   depends_on = [aws_cloudfront_distribution.cf]
 
   tags = {
@@ -32,6 +32,46 @@ resource "aws_codepipeline" "static_web_pipeline" {
       provider         = "GitHub"
       run_order        = 1
       version          = "1"
+    }
+  }
+  stage {
+    name = "Infra_Build"
+
+    action {
+      category = "Build"
+      configuration = {
+        "EnvironmentVariables" = jsonencode(
+          [
+            {
+              name  = "environment"
+              type  = "PLAINTEXT"
+              value = var.env
+            },
+            {
+              name  = "TF_ACTION"
+              type  = "PLAINTEXT"
+              value = "1.1.5"
+            },
+            {
+              name  = "TF_VERSION"
+              type  = "PLAINTEXT"
+              value = "apply"
+            },
+          ]
+        )
+        "ProjectName" = "infra-build"
+      }
+      input_artifacts = [
+        "SourceArtifact",
+      ]
+      name = "Build"
+      output_artifacts = [
+        "InfraBuildArtifact",
+      ]
+      owner     = "AWS"
+      provider  = "CodeBuild"
+      run_order = 1
+      version   = "1"
     }
   }
   stage {
