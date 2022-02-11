@@ -53,6 +53,7 @@ resource "aws_s3_bucket_object" "artifact" {
   source = data.archive_file.zip_file_for_lambda.output_path
   etag   = data.archive_file.zip_file_for_lambda.output_md5
   tags   = var.tags
+  depends_on = [aws_s3_bucket.edge_lambda_artifacts_bucket]
 }
 
 resource "aws_s3_bucket" "edge_lambda_artifacts_bucket" {

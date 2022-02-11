@@ -88,6 +88,5 @@ crash.*.log
 devops/terraform/.terraform
 
 *.zip
-variables.tf
 plan.file
 .terraform.lock.hcl

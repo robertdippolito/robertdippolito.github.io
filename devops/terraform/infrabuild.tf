@@ -2,7 +2,7 @@ data "template_file" "infra_buildspec" {
   template = file("../codebuild/infra/buildspec.yaml")
   vars = {
     TF_SRC_DIR = "devops/terraform/"
-    TF_VERSION = "1.2"
+    TF_VERSION = "1.1.5"
     TF_ACTION  = "apply"
   }
 }
@@ -19,7 +19,7 @@ resource "aws_codebuild_project" "infra_build" {
 
   artifacts {
     encryption_disabled    = false
-    name                   = "static-web-build-${var.env}"
+    name                   = "infra-build-${var.env}"
     override_artifact_name = false
     packaging              = "NONE"
     type                   = "CODEPIPELINE"
