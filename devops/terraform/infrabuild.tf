@@ -1,16 +1,16 @@
-data "template_file" "web_buildspec" {
-  template = file("../codebuild/app/buildspec.yaml")
+data "template_file" "infra_buildspec" {
+  template = file("../codebuild/infra/buildspec.yaml")
   vars = {
-    env             = var.env
-    static-web      = "${var.env}-${var.static_web_bucket_name}"
-    cf-distribution = "${aws_cloudfront_distribution.cf.id}"
+    TF_SRC_DIR = "devops/terraform/"
+    TF_VERSION = "1.2"
+    TF_ACTION  = "apply"
   }
 }
 
-resource "aws_codebuild_project" "static_web_build" {
+resource "aws_codebuild_project" "infra_build" {
   badge_enabled  = false
   build_timeout  = 60
-  name           = "static-web-build"
+  name           = "infra-build"
   queued_timeout = 480
   service_role   = aws_iam_role.static_build_role.arn
   tags = {
@@ -45,7 +45,7 @@ resource "aws_codebuild_project" "static_web_build" {
   }
 
   source {
-    buildspec           = data.template_file.web_buildspec.rendered
+    buildspec           = data.template_file.infra_buildspec.rendered
     git_clone_depth     = 0
     insecure_ssl        = false
     report_build_status = false

@@ -1,7 +1,7 @@
 
 // Static Blog Files Bucket
 resource "aws_s3_bucket" "blog_site_files" {
-  bucket       = "${var.env}-${var.static_web_bucket_name}"
+  bucket        = "${var.env}-${var.static_web_bucket_name}"
   acl           = "private"
   force_destroy = true
   tags          = var.tags
@@ -29,13 +29,13 @@ data "template_file" "static_s3_policy" {
   template = file("../access/blog_bucket_policy.json")
   vars = {
     bucket_name = "${var.env}-${var.static_web_bucket_name}"
-    oai_id   = "${aws_cloudfront_origin_access_identity.oai.id}"
+    oai_id      = "${aws_cloudfront_origin_access_identity.oai.id}"
 
   }
 }
 
 resource "aws_s3_bucket_policy" "s3_policy" {
-  bucket       = "${var.env}-${var.static_web_bucket_name}"
+  bucket = "${var.env}-${var.static_web_bucket_name}"
   policy = data.template_file.static_s3_policy.rendered
 }
 
@@ -43,4 +43,23 @@ resource "aws_s3_bucket_policy" "s3_policy" {
 resource "aws_s3_bucket" "artifacts_bucket" {
   bucket        = "${var.env}-${var.artifacts_bucket_name}"
   force_destroy = true
+}
+
+// Edge Lambda Artifact Bucket
+resource "aws_s3_bucket_object" "artifact" {
+    provider = aws.us_east_1
+  bucket = var.s3_artifact_bucket
+  key    = "${var.name}.zip"
+  source = data.archive_file.zip_file_for_lambda.output_path
+  etag   = data.archive_file.zip_file_for_lambda.output_md5
+  tags   = var.tags
+}
+
+resource "aws_s3_bucket" "edge_lambda_artifacts_bucket" {
+  provider = aws.us_east_1
+  bucket        = var.s3_artifact_bucket
+  force_destroy = true
+  versioning {
+    enabled = true
+  }
 }
