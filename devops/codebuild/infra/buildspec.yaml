@@ -17,7 +17,9 @@ phases:
       - terraform init -input=false
   build:
     commands:
-      - terraform ${TF_ACTION} -var="github_token=github-repo-key" -input=false -auto-approve
+      - terraform plan -var="github_token=${GITHUB_SECRET}" -lock=false
+      - echo "GITHUB_SECRET"
+      - terraform ${TF_ACTION} -var="github_token=${GITHUB_SECRET}" -input=false -auto-approve -lock=false
 
   post_build:
     commands:
