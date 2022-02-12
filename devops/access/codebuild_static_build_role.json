@@ -23,7 +23,21 @@
             "Action": [
                 "logs:CreateLogGroup",
                 "logs:CreateLogStream",
-                "logs:PutLogEvents"
+                "logs:PutLogEvents",
+                "logs:DescribeLogGroups",
+                "logs:ListTagsLogGroup",
+                "iam:GetRole",
+                "iam:GetPolicy",
+                "iam:ListRolePolicies",
+                "iam:GetPolicyVersion",
+                "iam:ListPolicyVersions",
+                "iam:GetRolePolicy",
+                "iam:ListAttachedRolePolicies",
+                "route53:ListHostedZones",
+                "route53:GetHostedZone",
+                "route53:ListTagsForResource",
+                "route53:ListResourceRecordSets",
+                "lambda:*"
               ],
             "Resource": "*"
         },
@@ -34,6 +48,42 @@
                 "ssm:GetParameters"
               ],
             "Resource": "arn:aws:ssm:ca-central-1:978863440604:parameter/github-repo-key"
+        },
+        {
+            "Sid": "5",
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:PutItem",
+                "dynamodb:GetItem",
+                "dynamodb:DeleteItem"
+              ],
+            "Resource": "arn:aws:dynamodb:ca-central-1:978863440604:table/terraform-state-lock-dynamo"
+        },
+        {
+            "Sid": "6",
+            "Effect": "Allow",
+            "Action": [
+                "acm:DescribeCertificate",
+                "acm:ListTagsForCertificate",
+                "cloudfront:GetCloudFrontOriginAccessIdentity",
+                "iam:GetRole",
+                "codebuild:BatchGetProjects",
+                "codebuild:UpdateProject",
+                "cloudfront:GetDistribution",
+                "cloudfront:ListTagsForResource",
+                "codepipeline:GetPipeline",
+                "codepipeline:ListTagsForResource",
+                "codepipeline:ListWebhooks",
+              ],
+            "Resource": [
+                "arn:aws:acm:us-east-1:978863440604:certificate/4f776af3-b0c2-434a-9e49-254edf0e86b3",
+                "arn:aws:cloudfront::978863440604:origin-access-identity/*",
+                "arn:aws:codebuild:ca-central-1:978863440604:project/infra-build",
+                "arn:aws:codebuild:ca-central-1:978863440604:project/static-web-build",
+                "arn:aws:cloudfront::978863440604:distribution/*",
+                "arn:aws:codepipeline:ca-central-1:978863440604:terra-robertdippolito-blog-pipeline",
+                "arn:aws:codepipeline:ca-central-1:978863440604:webhook:*"
+            ]
         }
     ]
 }

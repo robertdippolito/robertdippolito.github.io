@@ -4,6 +4,7 @@ data "template_file" "infra_buildspec" {
     TF_SRC_DIR = "devops/terraform/"
     TF_VERSION = "1.1.5"
     TF_ACTION  = "apply"
+    GITHUB_SECRET = "$GITHUB_SECRET"
   }
 }
 
