@@ -59,13 +59,3 @@ resource "aws_cloudfront_distribution" "cf" {
 resource "aws_cloudfront_origin_access_identity" "oai" {
   comment = "OAI for ${var.endpoint}"
 }
-
-# module "lambda-at-edge" {
-#   source                 = "transcend-io/lambda-at-edge/aws"
-#   version                = "0.4.0"
-#   description            = "Edge Lambda responsible for adjusting uri path"
-#   lambda_code_source_dir = "../edgeLambda/"
-#   name                   = "lambda-redirect-terraform"
-#   s3_artifact_bucket     = "edge_lambda_artifacts_bucket_001"
-#   runtime                = "nodejs14.x"
-# }
