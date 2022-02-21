@@ -3,7 +3,7 @@
   "private": true,
   "description": "Based on a starter for a blog (mathews kyle) and powered by Gatsby and Markdown",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Robert D'Ippolito",
   "bugs": {
     "url": "https://github.com/robertdippolito/robertdippolito.github.io/issues"
   },

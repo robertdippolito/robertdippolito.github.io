@@ -1,6 +1,6 @@
 variable "env" {
   description = "Environment definition"
-  default     = "stage"
+  default     = "prod"
 }
 
 variable "region" {
@@ -47,7 +47,7 @@ variable "tags" {
 variable "endpoint" {
   description = "Endpoint URL"
   type        = string
-  default     = "stage.robertdippolito.me"
+  default     = "robertdippolito.me"
 }
 
 variable "domain_name" {

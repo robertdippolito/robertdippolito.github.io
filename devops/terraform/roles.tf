@@ -1,5 +1,4 @@
 resource "aws_iam_role" "pipeline_role" {
-
   assume_role_policy    = templatefile("../access/pipeline_assume_role.json", {})
   force_detach_policies = false
   max_session_duration  = 3600
