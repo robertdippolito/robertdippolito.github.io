@@ -35,10 +35,12 @@
                 "iam:ListAttachedRolePolicies",
                 "iam:DeletePolicyVersion",
                 "iam:CreatePolicyVersion",
+                "iam:DetachRolePolicy",
                 "route53:ListHostedZones",
                 "route53:GetHostedZone",
                 "route53:ListTagsForResource",
                 "route53:ListResourceRecordSets",
+                "route53:ChangeResourceRecordSets",
                 "lambda:*"
               ],
             "Resource": "*"
@@ -79,7 +81,7 @@
                 "codepipeline:ListWebhooks"
               ],
             "Resource": [
-                "arn:aws:acm:us-east-1:978863440604:certificate/4f776af3-b0c2-434a-9e49-254edf0e86b3",
+                "arn:aws:acm:us-east-1:978863440604:certificate/*",
                 "arn:aws:cloudfront::978863440604:origin-access-identity/*",
                 "arn:aws:codebuild:ca-central-1:978863440604:project/infra-build",
                 "arn:aws:codebuild:ca-central-1:978863440604:project/static-web-build",
