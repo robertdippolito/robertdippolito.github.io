@@ -8,8 +8,6 @@ The goal of this post is to showcase the importance of DevOps and the impact it 
 out this blog, a simple static web page where I can write blog posts in markdown (a lightweight markup language). I will tell the story in phases with each phase improving the overall experience for the developer or development team. The phases will 
 display the evolution of the application with the ultimate goal of a __1-click-deploy__ that should automatically deploy both application and infrastructure changes.
 
-![1 Click Deploy](https://media.giphy.com/media/l2JdSlA1a1zKVAyze/giphy.gif)
-
 ## Phase 1: Creating the Frontend
 
 The blog was created using [Gatsby](https://www.gatsbyjs.com/), a flexible frontend Javascript framework that is based off of React. I like Gatsby because it has a-lot of prebuilt plugins that can be included via configuration to make it a-lot faster
@@ -208,7 +206,5 @@ I enjoyed writing this post and I am very happy that I have the blog up and runn
 [Blog Repo](https://github.com/robertdippolito/robertdippolito.github.io)
 
 [Gatsby Blog Template](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog)
-
-![Done](https://media.giphy.com/media/RkDX47fpp2nHlaZdjY/giphy.gif)
 
 
