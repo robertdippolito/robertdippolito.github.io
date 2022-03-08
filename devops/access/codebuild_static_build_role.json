@@ -78,7 +78,8 @@
                 "cloudfront:ListTagsForResource",
                 "codepipeline:GetPipeline",
                 "codepipeline:ListTagsForResource",
-                "codepipeline:ListWebhooks"
+                "codepipeline:ListWebhooks",
+                "codepipeline:UpdatePipeline"
               ],
             "Resource": [
                 "arn:aws:acm:us-east-1:978863440604:certificate/*",
@@ -87,7 +88,8 @@
                 "arn:aws:codebuild:ca-central-1:978863440604:project/static-web-build",
                 "arn:aws:cloudfront::978863440604:distribution/*",
                 "arn:aws:codepipeline:ca-central-1:978863440604:terra-robertdippolito-blog-pipeline",
-                "arn:aws:codepipeline:ca-central-1:978863440604:webhook:*"
+                "arn:aws:codepipeline:ca-central-1:978863440604:webhook:*",
+                "arn:aws:codepipeline:ca-central-1:978863440604:*"
             ]
         }
     ]
