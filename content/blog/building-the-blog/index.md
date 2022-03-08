@@ -1,6 +1,6 @@
 ---
 title: Building the Blog
-date: "2022-02-01T00:00:00.000Z"
+date: "2022-03-05T00:00:00.000Z"
 description: Building a personal blog (Gatsby) on serverless infrastructure (AWS) and automating the deployment using Terraform.
 ---
 
