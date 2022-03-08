@@ -4,9 +4,8 @@ date: "2022-03-05T00:00:00.000Z"
 description: Building a personal blog (Gatsby) on serverless infrastructure (AWS) and automating the deployment using Terraform.
 ---
 
-The goal of this post is to showcase the importance of DevOps and the impact it can have on ability for development teams to deliver quality software. In this blog post I will detail the phases involved in building
-out this blog, a simple static web page where I can write blog posts in markdown (a lightweight markup language). I will tell the story in phases with each phase improving the overall experience for the developer or development team. The phases will 
-display the evolution of the application with the ultimate goal of a __1-click-deploy__ that should automatically deploy both application and infrastructure changes.
+The goal of this post is to showcase the importance of DevOps and the impact it can have on the ability for development teams to deliver quality software. In this blog post I will detail the phases involved in building
+out this blog, a simple static web page where I can write blog posts in markdown (a lightweight markup language). I will tell the story in phases with each phase improving the overall experience for the developer or development team. The phases will display the evolution of the application with the ultimate goal of a __1-click-deploy__ that should automatically deploy both application and infrastructure changes.
 
 ## Phase 1: Creating the Frontend
 
@@ -15,7 +14,7 @@ to build web applications. I used [gatsby-starter-blog](https://www.gatsbyjs.com
 
 ![Frontend Before & After](./frontend-compare.png)
 
-The building of the webpage was fairly straightforward. I needed to add a navigation bar, re-write the main page and update the footer. The blog post preview and delivery mechanism largely stayed the same. I also populated some of my previous posts
+The building of the webpage was fairly straightforward. I needed to add a navigation bar, re-write the main page and update the footer. The blog post preview and delivery mechanism largely stayed the same. I also populated some of my older posts
 that were previously posted on [Medium](https://medium.com/@robert.e.dippolito) to add some content while I tested. 
 
 ## Phase 2: Deploying the Site
@@ -30,7 +29,7 @@ As I mentioned in the introduction I chose to deploy the application using a ver
 
 ### Deploying the Infrastructure
 
-In order to get these services up and running we need to go into the AWS console and create an S3 bucket, configure and deploy a CloudFront distribution, and configure a hosted zone in Route53. The following steps assume you have a domain name. These can be purchased by providers such as [GoDaddy](https://www.godaddy.com/en-ca) & [Namecheap](https://www.namecheap.com) or directly in the AWS console in the Route 53 Dashboard (Route53 -> Registered domains -> Register Domain).
+In order to get these services up and running we need to go into the AWS console and create an S3 bucket, configure and deploy a CloudFront distribution, and configure a hosted zone in Route53. The following steps assume you have a domain name. These can be purchased from providers such as [GoDaddy](https://www.godaddy.com/en-ca) & [Namecheap](https://www.namecheap.com) or directly in the AWS console in the Route 53 Dashboard (Route53 -> Registered domains -> Register Domain).
 1. Prior to starting we will need to configure our DNS. To do this we will need a domain name and an AWS managed certificate.
    - To request an AWS managed certificate navigate to AWS Certificate Manager and select the Request option.
    - The certificate type should be a public certificate 
@@ -38,9 +37,9 @@ In order to get these services up and running we need to go into the AWS console
    - This request typically takes between 40 mins to a few hours. Once completed the status of your certificate should display issued.
 2. Next we will need to configure a new hosted zone.
    - Navigate to Route 53 and select Hosted Zones then Create hosted zone
-   - Depending on where your purchased your domain you will need to set up your name server (NS) and start of authority (SOA) records. Your provider will likely have detailed instructions on how to do this and is outside the scope of this post.
-   - We also need to create an alias (A) record to give Cloudfront the instruction to route traffic coming to robertdippolito.me to our CloudFront distribution (note you will need your CloudFront distribution's Domain for this step).
-3. To start we will first create an S3 bucket. The name of the bucket must be unique but and we also want to make sure that public access to the bucket is restricted.
+   - Depending on where you purchased your domain you will need to set up your name server (NS) and start of authority (SOA) records. Your provider will likely have detailed instructions on how to do this and is outside the scope of this post.
+   - We also need to create an alias (A) record to give Cloudfront the instruction to route traffic coming to robertdippolito.me to our CloudFront distribution (note you will need your CloudFront distribution's domain for this step).
+3. Next, we will create an S3 bucket. The name of the bucket must be unique but and we also want to make sure that public access to the bucket is restricted.
 4. Next, we will setup the CloudFront. To do this navigate to the CloudFront page and select create distribution.
    - Add the origin name as the S3 bucket we created in the previous step
    - Add the origin path to be 'public/'. I will explain this when we upload our site files into the bucket.
@@ -50,7 +49,7 @@ In order to get these services up and running we need to go into the AWS console
    - In settings set the alternate domain name to the site you wish to route your traffic to (in my case robertdippolito.me)
    - Create the distribution
 5. Once the steps above are completed our infrastructure is setup. However, all requests bound for our domain are routing to our CloudFront, and per our configuration, our CDN will return the index.html file that doesn't exist. This will result in an access denied page returned from S3 because we are requesting a file that does not exist. To fix this we need to upload our site files to S3.
-   - In order to upload our files we first need to package them and create a production ready optimized build. To learn more about the Gatsby build process check out this [link](https://www.gatsbyjs.com/docs/conceptual/overview-of-the-gatsby-build-process/). Once we build the files a production ready set of files is created in the /public directory of our working directory.
+   - In order to upload our files we first need to package them and create a production ready optimized build. To learn more about the Gatsby build process check out this [link](https://www.gatsbyjs.com/docs/conceptual/overview-of-the-gatsby-build-process/). Once we build, a production ready set of files is created in the /public directory of our working directory.
    - We will now upload the public folder directly into our created S3 bucket via the S3 console. Once completed we should be able to navigate to our domain (https://robertdippolito.me) and we should see our webpage.
 
 >__Amazing, we are live!__ All of that work but we deployed a static website on AWS. While this is great it was also a-lot of work for something that is pretty simple. Not only that but we did everything manually, nothing was recorded and don't look now but someone just found a typo on our website. Now what?
