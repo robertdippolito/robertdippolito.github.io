@@ -52,9 +52,6 @@ const About = () => {
             community the possibilities are endless. If you have a problem or an
             idea I would love to hear it. Do not hesitate to reach out via
             Twitter or Github.
-            <br className="about-break" />
-            My immediate goal is to achieve my AWS certified solution architect
-            professional and write my first blog post.
           </div>
         </div>
       </div>
