@@ -72,6 +72,7 @@
                 "cloudfront:GetCloudFrontOriginAccessIdentity",
                 "cloudfront:*",
                 "iam:GetRole",
+                "iam:PassRole",
                 "codebuild:BatchGetProjects",
                 "codebuild:UpdateProject",
                 "cloudfront:GetDistribution",
@@ -83,6 +84,7 @@
               ],
             "Resource": [
                 "arn:aws:acm:us-east-1:978863440604:certificate/*",
+                "arn:aws:iam::978863440604:role/service-role/blog-pipeline-role-prod",
                 "arn:aws:cloudfront::978863440604:origin-access-identity/*",
                 "arn:aws:codebuild:ca-central-1:978863440604:project/infra-build",
                 "arn:aws:codebuild:ca-central-1:978863440604:project/static-web-build",

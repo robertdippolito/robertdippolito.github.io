@@ -28,6 +28,7 @@ __Practice tests:__ I bought test packages from [Udemy](https://www.udemy.com/co
 ![Set of 10 Practice Questions](./good_test_score.png)
 
 ### The Bad 
+
 - __Test fatigue__. Writing a 75 question test and then reviewing the questions you got wrong was hard and took atleast 5 hours. I would not recommend practicing full tests until you are close to writing it and purely from a time management perspective. I found doing 10-20 questions much more manageable and productive on a daily basis.
 ![Bad Test Score Final Result](./bad_test_score_final.png)
 
