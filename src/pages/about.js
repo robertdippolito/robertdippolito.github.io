@@ -10,15 +10,15 @@ const About = () => {
         <div className="about-main-section-a">
           <div className="about-title">Hi, I'm Robert D'Ippolito</div>
           <div className="about-body">
-            I'm an engineering manager at Ada - currently based out of Toronto,
+            I'm an engineering manager at <a href="https://wwww.ada.cx">Ada</a> - currently based out of Toronto,
             Canada.
             <br className="about-break" />I graduated from the University of
             Toronto in 2015 with a civil engineering degree focused on
             structural engineering and a minor in business. I was a participant
-            in the University of Toronto's incubator called the Hatchery where I
+            in the University of Toronto's incubator called the <a href="https://hatchery.engineering.utoronto.ca/">Hatchery</a> where I
             started MentorMee a mentorship platform for highschool and
             university students.
-            <br className="about-break" />I have over 6 years of consulting
+            <br className="about-break" />I have over 7 years of consulting
             experience building digital products on AWS for enterprise clients
             across many industries.
           </div>
@@ -31,7 +31,7 @@ const About = () => {
             conversational user interfaces, data lakes and web applications that
             have served hundreds of thousands of end users.
             <br className="about-break" />I am an AWS certified solution
-            architect associate and certified Terraform associate.
+            architect professional and certified Terraform associate.
             <br className="about-break" />I am fascinated with the concept of
             continuous integration and delivery and believe that it is
             fundemental to achieving IT objectives in todays fluid operating
