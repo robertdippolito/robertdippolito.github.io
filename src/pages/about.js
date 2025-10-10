@@ -10,24 +10,23 @@ const About = () => {
         <div className="about-main-section-a">
           <div className="about-title">Hi, I'm Robert D'Ippolito</div>
           <div className="about-body">
-            I'm an engineering manager at <a href="https://wwww.ada.cx">Ada</a> - currently based out of Toronto,
+            I'm an engineering manager at <a href="https://wwww.pinterest.com">Pinterest</a> - currently based out of Toronto,
             Canada.
             <br className="about-break" />I graduated from the University of
             Toronto in 2015 with a civil engineering degree focused on
             structural engineering and a minor in business. I was a participant
             in the University of Toronto's incubator called the <a href="https://hatchery.engineering.utoronto.ca/">Hatchery</a> where I
-            started MentorMee a mentorship platform for highschool and
+            started MentorMee, a mentorship platform for highschool and
             university students.
-            <br className="about-break" />I have over 7 years of consulting
-            experience building digital products on AWS for enterprise clients
-            across many industries.
+            <br className="about-break" />I have over 10 years of consulting, startup, and big tech
+            experience building digital products on AWS.
           </div>
         </div>
         <div className="about-main-section-b">
           <div className="about-title">Why Amazon Web Services?</div>
           <div className="about-body">
             I have been focused on building cloud native solutions on AWS for
-            the last 3 years. In that time I have built call centers,
+            the last 8 years. In that time I have built call centers,
             conversational user interfaces, data lakes and web applications that
             have served hundreds of thousands of end users.
             <br className="about-break" />I am an AWS certified solution

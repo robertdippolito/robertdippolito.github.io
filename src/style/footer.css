@@ -62,7 +62,7 @@
     display: grid;
     grid-template-columns: auto auto;
     grid-template-areas: 
-    "github linkedin";
+    "github linkedin youtube";
 }
 .footer-main-links-github {
     grid-area: github;
@@ -71,6 +71,11 @@
 }
 .footer-main-links-linkedin {
     grid-area: linkedin;
+    height: 40px;
+    width: 40px;
+}
+.footer-main-links-youtube {
+    grid-area: youtube;
     height: 40px;
     width: 40px;
 }
