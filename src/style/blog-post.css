@@ -13,8 +13,8 @@
 }
 .blog-post-detail-body {
     margin-top: 2em;
-    font-family: Roboto-Regular;
-    color:#072D60;
+    font-family: var(--font-body);
+    color: var(--color-text);
 }
 .blog-nav-link {
     text-decoration: none;
@@ -22,7 +22,7 @@
 }
 
 h2,  h3 {
-    font-family: Roboto-Medium;
-    font-weight: normal;
-    color:#072D60;
+    font-family: var(--font-heading);
+    font-weight: var(--fontWeight-bold);
+    color: var(--color-heading);
 }
