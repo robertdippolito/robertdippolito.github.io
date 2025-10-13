@@ -96,6 +96,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
+            title: `Rob's Cloud Blog RSS Feed`,
           },
         ],
       },
