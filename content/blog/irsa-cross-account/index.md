@@ -1,7 +1,7 @@
 ---
 title: AWS Fundamentals — Cross-Account S3 Access from EKS Pods (IRSA, no static keys)
 date: "2025-10-10T00:00:00.000Z"
-description: Creating priveledged service accounts using OIDC, IRSA and STS.
+description: Creating privileged service accounts using OIDC, IRSA and STS.
 ---
 
 This post summarizes my YouTube demo where an EKS pod in Account A reads an object from an S3 bucket in Account B—without hard-coded access keys. Below you’ll find the why, the architecture, the minimal Terraform/Kubernetes you need, a tiny API snippet, and a quick “what can go wrong” checklist.

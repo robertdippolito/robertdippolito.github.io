@@ -1,10 +1,11 @@
 @import url("../style.css");
 
 .footer-main {
-    padding:0;
-    font-family: Roboto-Regular;
+    padding: 0;
+    font-family: var(--font-body);
+    font-weight: var(--fontWeight-normal);
     font-size: var(--fontSize-2);
-    color: var(--color-blog-primary);
+    color: var(--color-text);
     background-color: #F2EBE5;
 }
 .footer-main-container {
@@ -14,7 +15,7 @@
     display: grid;
     grid-template-columns: 25% auto 25%;
     grid-template-rows: auto auto auto;
-    grid-template-areas: 
+    grid-template-areas:
         "contact contact contact"
         "button button button"
         "copyright copyright links"
@@ -24,44 +25,47 @@
     margin: 2em;
     text-align: center;
     grid-area: contact;
-    font-family: Roboto-Medium;
-    font-size: x-large;
+    font-family: var(--font-body);
+    font-weight: var(--fontWeight-medium);
+    font-size: var(--fontSize-4);
 }
 .footer-main-button {
     grid-area: button;
     text-align: center;
 }
 .footer-main-button-detail {
-  background-color: var(--color-blog-primary);
-  font-family: Roboto-Medium;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: x-large;
+    background-color: var(--color-blog-primary);
+    font-family: var(--font-body);
+    font-weight: var(--fontWeight-medium);
+    font-size: var(--fontSize-3);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 .footer-main-button-detail:hover {
     cursor: pointer;
-    background-color:#072D60;
-  }
-  .footer-main-button-link{
+    background-color: var(--color-blog-primary-dark);
+}
+.footer-main-button-link {
     text-decoration: none;
     color: white;
 }
 .footer-main-copyright {
     margin: auto 0;
     grid-area: copyright;
-    font-size: small;
-    font-family: Roboto-Light;
+    font-size: var(--fontSize-0);
+    font-weight: var(--fontWeight-normal);
+    font-family: var(--font-body);
 }
 .footer-main-links {
     grid-area: links;
     margin: 2em 0;
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-areas: 
+    grid-template-areas:
     "github linkedin youtube";
 }
 .footer-main-links-github {

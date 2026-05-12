@@ -2,7 +2,7 @@
 
 .navbar-main {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
     "navLeft navRight";
     height: 40px;
     padding-top: 1em;
@@ -12,7 +12,7 @@
     height: 100%;
     grid-area: navLeft;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: 
+    grid-template-areas:
     "logo . .";
 }
 .navbar-right {
@@ -29,8 +29,9 @@
     text-align: center;
 }
 .navbar-logo-img {
-    font-family: Roboto-Bold;
-    font-size: xx-large;
+    font-family: var(--font-body);
+    font-weight: var(--fontWeight-bold);
+    font-size: var(--fontSize-4);
     text-align: left;
 }
 .navbar-home {
@@ -44,18 +45,19 @@
     text-align: center;
 }
 .navbar-heading {
-    font-family: Roboto-Medium;
+    font-family: var(--font-body);
+    font-weight: var(--fontWeight-medium);
+    font-size: var(--fontSize-2);
     text-align: left;
-    font-size: large;
 }
-.navbar-heading:hover{
+.navbar-heading:hover {
     cursor: pointer;
 }
 
 .navbar-link {
     text-decoration: none;
-    color: var(--color-blog-primary)
+    color: var(--color-heading);
 }
 .navbar-link:hover {
-    color:#072D60;
+    color: var(--color-text-light);
 }

@@ -1,9 +1,8 @@
 @import url("../style.css");
 
-
 .about-container {
     margin-top: 6em;
-    color: var(--color-blog-primary);
+    color: var(--color-text);
     max-width: 65ch;
     min-height: 100%;
     display: grid;
@@ -11,27 +10,28 @@
     "section-a"
     "section-b"
     "section-c"
-
 }
 .about-main-section-a {
     margin-top: 2em;
-    grid-area: section-a
+    grid-area: section-a;
 }
 .about-main-section-b {
     margin-top: 2em;
-    grid-area: section-b
+    grid-area: section-b;
 }
 .about-main-section-c {
     margin-top: 2em;
-    grid-area: section-c
+    grid-area: section-c;
 }
 .about-title {
-    font-family: Roboto-Medium;
+    font-family: var(--font-body);
+    font-weight: var(--fontWeight-semibold);
     font-size: var(--fontSize-3);
 }
 .about-body {
     margin-top: 1em;
-    font-family: Roboto-Light;
+    font-family: var(--font-body);
+    font-weight: var(--fontWeight-normal);
     font-size: var(--fontSize-2);
 }
 .about-break {

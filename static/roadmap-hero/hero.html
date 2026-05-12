@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>RobOps — Content Roadmap Q2 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f3ede2;
+    --bg-2: #ece4d4;
+    --ink: #161514;
+    --ink-2: #3b3833;
+    --muted: #7a7166;
+    --line: #1a1916;
+    --card: #fbf7ee;
+    --card-edge: #d9cfbb;
+    --accent: #c2410c;     /* terracotta */
+    --accent-2: #1e4d3a;   /* deep green for the second pin */
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #0d0d0e; }
+  body {
+    font-family: "Inter Tight", system-ui, sans-serif;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .hero {
+    width: 1600px;
+    height: 900px;
+    background:
+      radial-gradient(1200px 600px at 12% -10%, #f6f0e4 0%, transparent 60%),
+      radial-gradient(900px 500px at 100% 110%, #ebe2d0 0%, transparent 55%),
+      var(--bg);
+    position: relative;
+    overflow: hidden;
+    padding: 36px 72px 60px;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    gap: 14px;
+  }
+
+  /* subtle paper grain */
+  .hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(rgba(22,21,20,0.05) 1px, transparent 1px);
+    background-size: 3px 3px;
+    opacity: 0.35;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+  }
+
+  /* ---------- channel header (subtle) ---------- */
+  .channel-header {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+  }
+  .ch-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .ch-avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid rgba(22,21,20,0.18);
+    box-shadow: 0 4px 10px -6px rgba(22,21,20,0.4);
+    flex: none;
+  }
+  .ch-avatar img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 22%;
+  }
+  .ch-name {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .ch-subscribe {
+    background: #e02d2d;
+    color: #fff;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    box-shadow:
+      inset 0 -2px 0 rgba(0,0,0,0.18),
+      0 4px 10px -6px rgba(224,45,45,0.7);
+  }
+
+  /* ---------- title block ---------- */
+  .titleblock {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 32px;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(22,21,20,0.18);
+  }
+  .titleblock h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+    margin: 0;
+    color: var(--ink);
+  }
+  .titleblock h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .titleblock .sub {
+    font-size: 17px;
+    color: var(--ink-2);
+    max-width: 360px;
+    line-height: 1.45;
+    text-align: right;
+  }
+  .titleblock .sub b { color: var(--ink); font-weight: 600; }
+
+  /* ---------- timeline ---------- */
+  .timeline {
+    position: relative;
+    z-index: 2;
+    padding-top: 14px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+
+  .months {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    position: relative;
+  }
+  .month-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding: 0 6px 14px;
+  }
+  .month-head .num {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+  }
+  .month-head .name {
+    font-family: "Fraunces", serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .month-head .status {
+    margin-left: auto;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 4px 8px;
+    border: 1px solid rgba(22,21,20,0.2);
+    border-radius: 999px;
+  }
+
+  /* spine */
+  .spine {
+    position: relative;
+    height: 2px;
+    background: var(--ink);
+    margin: 0 6px;
+  }
+  .spine::before, .spine::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--ink);
+    transform: translate(-50%, -50%);
+  }
+  .spine::before { left: 0; }
+  .spine::after { left: 100%; }
+
+  .ticks {
+    position: absolute; inset: 0;
+    pointer-events: none;
+  }
+  .tick {
+    position: absolute;
+    top: 50%;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--ink);
+    transform: translate(-50%, -50%);
+  }
+  .tick.accent {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .tick .pulse {
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 1px solid var(--accent);
+    opacity: 0.4;
+  }
+
+  /* cards row */
+  .cards-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    padding-top: 28px;
+  }
+  .col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--card-edge);
+    border-radius: 14px;
+    padding: 18px 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: relative;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.6) inset,
+      0 12px 24px -18px rgba(22,21,20,0.35);
+  }
+  .card .ord {
+    position: absolute;
+    top: 12px; right: 14px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+  }
+  .card .icon {
+    width: 64px; height: 64px;
+    border-radius: 14px;
+    background: #fff;
+    border: 1px solid rgba(22,21,20,0.08);
+    display: grid; place-items: center;
+    overflow: hidden;
+    box-shadow: 0 4px 12px -8px rgba(22,21,20,0.4);
+  }
+  .card .icon img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+    padding: 6px;
+  }
+  .card .icon.text-tile {
+    background: linear-gradient(135deg, #1f1d1a, #2c2926);
+    color: #f3ede2;
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-size: 28px;
+    font-weight: 500;
+    padding: 0;
+    letter-spacing: -0.02em;
+  }
+  .card .title {
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+  .card .series {
+    margin-top: auto;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .card .series .pip {
+    width: 5px; height: 5px;
+    background: var(--ink);
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .card.live { border-color: var(--accent); }
+  .card.live .pip { background: var(--accent); }
+  .card.live .status-flag {
+    position: absolute;
+    top: -10px; left: 16px;
+    background: var(--accent);
+    color: #fff8ef;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+
+  /* ---------- footer ---------- */
+  .footer {
+    position: absolute;
+    bottom: 22px;
+    left: 72px;
+    right: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+  .footer .channel {
+    color: var(--ink-2);
+  }
+  .footer .arrow {
+    display: inline-block;
+    width: 38px; height: 1px;
+    background: var(--muted);
+    vertical-align: middle;
+    margin: 0 10px;
+    position: relative;
+  }
+  .footer .arrow::after {
+    content: "";
+    position: absolute;
+    right: 0; top: 50%;
+    width: 6px; height: 6px;
+    border-right: 1px solid var(--muted);
+    border-top: 1px solid var(--muted);
+    transform: translateY(-50%) rotate(45deg);
+  }
+</style>
+</head>
+<body>
+  <div class="hero" data-screen-label="01 Hero">
+
+    <!-- channel header -->
+    <div class="channel-header">
+      <div class="ch-brand">
+        <div class="ch-avatar"><img src="assets/headshot.png" alt="RobOps host headshot" /></div>
+        <span class="ch-name">RobOps</span>
+      </div>
+      <span class="ch-subscribe">Subscribe</span>
+    </div>
+
+    <!-- title -->
+    <div class="titleblock">
+      <h1>The next six<br /><em>on the bench.</em></h1>
+      <div class="sub">
+        A quarter of <b>RobOps</b> videos — from self-hosted LLMs to EKS cost tuning.
+        Same channel, sharper focus.
+      </div>
+    </div>
+
+    <!-- timeline -->
+    <div class="timeline">
+      <div class="months">
+        <!-- May -->
+        <div>
+          <div class="month-head">
+            <span class="num">05 / 26</span>
+            <span class="name">May</span>
+            <span class="status">In flight</span>
+          </div>
+        </div>
+        <!-- June -->
+        <div>
+          <div class="month-head">
+            <span class="num">06 / 26</span>
+            <span class="name">June</span>
+            <span class="status">Queued</span>
+          </div>
+        </div>
+        <!-- July -->
+        <div>
+          <div class="month-head">
+            <span class="num">07 / 26</span>
+            <span class="name">July</span>
+            <span class="status">Queued</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- spine + ticks -->
+      <div style="position: relative;">
+        <div class="spine"></div>
+        <div class="ticks">
+          <!-- 6 ticks distributed at the midpoint of each card column.
+               With 3 month-columns each holding 2 cards, ticks land at 1/12, 3/12, 5/12, 7/12, 9/12, 11/12 -->
+          <div class="tick accent" style="left: 8.33%;"><div class="pulse"></div></div>
+          <div class="tick" style="left: 25%;"></div>
+          <div class="tick" style="left: 41.66%;"></div>
+          <div class="tick" style="left: 58.33%;"></div>
+          <div class="tick" style="left: 75%;"></div>
+          <div class="tick" style="left: 91.66%;"></div>
+        </div>
+      </div>
+
+      <!-- cards -->
+      <div class="cards-row">
+        <!-- MAY -->
+        <div class="col">
+          <div class="card live">
+            <span class="status-flag">Posted</span>
+            <span class="ord">01 / 06</span>
+            <div class="icon"><img src="assets/ollama.png" alt="" /></div>
+            <div class="title">Self-Hosting LLMs with Ollama</div>
+            <div class="series"><span class="pip"></span>AI Fundamentals</div>
+          </div>
+          <div class="card">
+            <span class="ord">02 / 06</span>
+            <div class="icon text-tile">Cl</div>
+            <div class="title">Build an AI Agent from Scratch with the Claude API</div>
+            <div class="series"><span class="pip"></span>AI Fundamentals</div>
+          </div>
+        </div>
+
+        <!-- JUNE -->
+        <div class="col">
+          <div class="card">
+            <span class="ord">03 / 06</span>
+            <div class="icon"><img src="assets/identity-center.jpeg" alt="" /></div>
+            <div class="title">AWS IAM Identity Center (SSO) Explained</div>
+            <div class="series"><span class="pip"></span>AWS Fundamentals · IAM &amp; Access</div>
+          </div>
+          <div class="card">
+            <span class="ord">04 / 06</span>
+            <div class="icon"><img src="assets/kagent.png" alt="" /></div>
+            <div class="title">Kagent — Agents on Kubernetes</div>
+            <div class="series"><span class="pip"></span>EKS / AI</div>
+          </div>
+        </div>
+
+        <!-- JULY -->
+        <div class="col">
+          <div class="card">
+            <span class="ord">05 / 06</span>
+            <div class="icon"><img src="assets/gha.png" alt="" /></div>
+            <div class="title">GitHub Actions + AWS OIDC: No Static Credentials</div>
+            <div class="series"><span class="pip"></span>Platform Engineering</div>
+          </div>
+          <div class="card">
+            <span class="ord">06 / 06</span>
+            <div class="icon"><img src="assets/karpenter.png" alt="" /></div>
+            <div class="title">EKS Experiments #4 — Cut Node Costs with Karpenter</div>
+            <div class="series"><span class="pip"></span>EKS Experiments</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span class="channel">youtube.com / @robops</span>
+      <span>Roadmap<span class="arrow"></span>Subscribe for the drop</span>
+    </div>
+
+  </div>
+</body>
+</html>
