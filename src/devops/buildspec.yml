@@ -1,0 +1,29 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - npm install -g gatsby
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies.
+      - npm install
+  build:
+    commands:
+      - echo Build started on 'date'
+      - npm run build
+  post_build:
+    commands:
+      - aws s3 cp --recursive ./public s3://robert-dippolito-personal-blog/public
+      - > 
+        aws s3 cp 
+        --cache-control="max-age=0, no-cache, no-store, must-revalidate"
+        ./public/index.html s3://robert-dippolito-personal-blog/public
+      - >
+        aws cloudfront create-invalidation --distribution-id E2Q3V0NVXC9SVY
+        --paths /public
+artifacts:
+  files:
+    - '**/*'
+  base-directory: public
